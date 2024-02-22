@@ -3,11 +3,26 @@
 }
 body{
     margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: hsl(30, 54%, 90%);
+  
     
+}
+main{
+    margin: 3em auto;
+    max-width: 500px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+#img-cont{
+    padding: 1em;
 }
 #img-cont img{
     height: 200px;
     width: 100%;
+    border-radius: 20px;
 }
 section{
     padding: 0 2em;
@@ -50,6 +65,7 @@ li::marker{
 }
 #nutrition-cont{
     border-top: solid .5px hsl(332, 51%, 32%);
+    padding-bottom: 1em;
 }
 
 .grid{
@@ -57,6 +73,14 @@ li::marker{
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
+}
+@media(min-width:1024px){
+    .grid{
+        place-items: start;
+    }
+}
+.grid:last-child{
+    border-bottom: none;
 }
 
 .grid span{
